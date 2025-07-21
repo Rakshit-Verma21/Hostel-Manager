@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My_Hostel</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="email_help_default">Please Verify Your Email Through the Link Sent to your new Email Address</string>
+    <string name="email_help_required_reauthentication">If You have Completed the Verification  Then Proceed to Login to your Account by Clicking the "Update" button. Else use the "Verify" button to resend a verification Link to the Address</string>
+    <string name="add_hostlers_fill_all_details">Please Fill All the above Fields and at least One of the Documents</string>
+    <string name="add_hostlers_confirm_details">Please Confirm the Details Above and Click below to save the details and Add this person</string>
+</resources>

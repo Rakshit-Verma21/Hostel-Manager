@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View_Hostler_Details">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_1_View_hostler_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_view_hostler_details"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/background"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative_layout_1_View_hostler_activity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/H_details_relative_layout_1_View_hostler_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/background_inside"
+                android:elevation="100dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/H_details_pic"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="15dp"
+                    android:elevation="50dp"
+                    app:civ_border_color="@color/black"
+                    app:civ_border_width="0.5dp">
+
+                </de.hdodenhof.circleimageview.CircleImageView>
+
+                <TextView
+                    android:id="@+id/H_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/H_details_pic"
+                    android:elevation="20dp"
+                    android:text="Kassandra De Santa"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/room_assigned"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/H_details_name"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/H_details_pic"
+                    android:gravity="center_horizontal"
+                    android:text="Room Not Assigned"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Spinner
+                    android:id="@+id/view_hosteler_spinner_Room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/H_details_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/room_assigned" />
+
+                <TextView
+                    android:id="@+id/phone_text_view_H_Details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/view_hosteler_spinner_Room"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/H_details_pic"
+                    android:gravity="center_vertical"
+                    android:text="Phone Number :"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/H_details_phone_Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/view_hosteler_spinner_Room"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/phone_text_view_H_Details"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/H_details_text_view_Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/H_details_pic"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="center_vertical"
+                    android:text="Address :"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/H_Details_Address"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/H_details_pic"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/H_details_text_view_Address"
+                    android:text="New Breoker Avenue- 7th Street New York America 88900"
+                    android:textSize="14sp"></EditText>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView50"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/H_details_relative_layout_1_View_hostler_activity"
+                android:layout_margin="4dp"
+                android:background="@drawable/background_inside"
+                android:elevation="100dp"
+                android:gravity="center_vertical"
+                android:text="Education Details"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/H_details_Relative_layoutt_Education_Details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textView50"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:elevation="100dp">
+
+                <TextView
+                    android:id="@+id/textView51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Pursuing Degree :"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/view_hostler_CPD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@id/textView51"
+                    android:ems="10"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textView62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView51"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text=" College :"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/view_hostler_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView51"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/textView62"
+                    android:ems="10" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/textView63"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/H_details_Relative_layoutt_Education_Details"
+                android:layout_margin="4dp"
+                android:background="@drawable/background_inside"
+                android:elevation="100dp"
+                android:gravity="center_vertical"
+                android:text="Parental Details"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/H_details_Relative_layoutt_Parental_Details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textView63"
+                android:layout_margin="4dp"
+                android:background="@color/white"
+                android:elevation="100dp">
+
+                <TextView
+                    android:id="@+id/textView64"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Father Name :"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/view_hostler_father_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/textView64"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+
+                    android:inputType="text"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView64"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text=" Mother Name :"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/view_hostler_mother_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/view_hostler_father_name"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/textView65"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView65"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text=" Father's Phone Number :"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/view_hostler_father_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_hostler_mother_name"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/textView66"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView66"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text=" Mother's Phone Number :"
+                    android:textAlignment="center"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/view_hostler_mother_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_hostler_father_phone"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/textView67"
+                    android:ems="10" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/view_hostler_aadhar"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/H_details_Relative_layoutt_Parental_Details"
+                android:layout_margin="10dp"
+                android:background="@drawable/background_text"
+                android:cropToPadding="true"
+                android:elevation="100dp"
+                android:scaleType="fitXY"
+                tools:srcCompat="@drawable/baseline_add_photo_alternate_24" />
+
+            <TextView
+                android:id="@+id/textView69"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_hostler_aadhar"
+                android:layout_margin="10dp"
+                android:text="Aadhar Card"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/view_hostler_pan"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_below="@id/H_details_Relative_layoutt_Parental_Details"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/view_hostler_aadhar"
+                android:background="@drawable/background_text"
+                android:cropToPadding="true"
+                android:elevation="100dp"
+                android:foregroundGravity="center_horizontal"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/baseline_add_photo_alternate_24" />
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/view_hostler_pan"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@id/textView69"
+                android:text="Pan Card"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_View_hostlers"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/H_details_Relative_layoutt_Parental_Details"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="60dp"
+                android:layout_toRightOf="@id/view_hostler_pan"
+                android:indeterminateBehavior="repeat"
+                android:progressTint="#03A9F4" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

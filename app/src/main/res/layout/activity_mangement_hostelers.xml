@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Mangement_Hostelers">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_activity_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_management_hostelers"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background"
+            android:elevation="25dp">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <SearchView
+            android:id="@+id/search_hostlers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar_management_hostelers"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="3dp"
+            android:background="@drawable/background_inside"
+            android:elevation="20dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_management_hostlers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_hostlers"
+            android:layout_margin="3dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/single_view" />
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="170dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/room_cv_room_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#97B3E6FF"
+            android:drawableTop="@drawable/baseline_bedroom_child_24"
+            android:drawableTint="#043F6C"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:text="Room: 2A"
+            android:textAlignment="center"
+            android:textColor="#0B1552"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/room_cv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_cv_room_name"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="5dp"
+            android:text="Status : Available"
+            android:textAlignment="center"
+            android:textColor="#0B1552"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/room_cv_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_cv_type"
+            android:layout_marginLeft="2dp"
+            android:text="Size : 2"
+            android:textAlignment="center"
+            android:textColor="#0B1552"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/room_cv_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_cv_status"
+            android:layout_marginLeft="2dp"
+            android:text="Type : Single Bed"
+            android:textAlignment="center"
+            android:textColor="#0B1552"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/room_cv_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/room_cv_size"
+            android:layout_marginStart="2dp"
+            android:text=" Rs. 3000"
+            android:textAlignment="center"
+            android:textColor="#0B1552"
+            android:textSize="10sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

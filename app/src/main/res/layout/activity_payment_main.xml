@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Payment_Main">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/payment_main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:subtitleTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:title="Payments" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/payment_main_toolbar"
+        android:background="@drawable/main_activity_background">
+
+        <TextView
+            android:id="@+id/payment_main_month_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/background_relative_layoutt"
+            android:elevation="6dp"
+            android:padding="10dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/payment_main_no_members_display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/payment_main_month_name"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#0B1344"
+            android:textSize="16sp"
+            tools:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/payment_main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/payment_main_month_name"
+            android:layout_margin="1dp"
+            android:elevation="6dp"
+            android:padding="5dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/single_item_payment_main_list_" />
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

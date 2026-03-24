@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/edit_hostlers_detail"
+        android:icon="@drawable/baseline_edit_24"
+        android:title="Save"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/save_view_hostlers_menu"
+        android:icon="@drawable/baseline_check_circle_24"
+        android:title="Item"
+        android:visible="false"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/delete_hostler_view_hostler"
+        android:title="Delete Hostler" />
+</menu>

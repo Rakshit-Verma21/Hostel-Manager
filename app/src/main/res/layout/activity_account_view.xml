@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Account.Account_view"
+    tools:menu="@menu/account_menu">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_account_activity"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/background"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Hello " />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/main_activity_welcome_user"
+            android:elevation="50dp"
+            android:paddingTop="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_pic_account_activity"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="4dp"
+                android:paddingStart="10dp"
+                android:paddingBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pfp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/owner_account_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Owner Name"
+                android:textAlignment="viewStart"
+                android:textColor="#0B1552"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic_account_activity"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/hostel_name_account_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:inputType="text"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:singleLine="true"
+                android:text="Hostel Name"
+                android:textAlignment="viewStart"
+                android:textColor="#0B1552"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/profile_pic_account_activity"
+                app:layout_constraintTop_toBottomOf="@+id/owner_account_activity">
+
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/edit_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/background_text"
+                android:elevation="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.053"
+                app:layout_constraintStart_toEndOf="@+id/hostel_name_account_activity"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.728"
+                app:srcCompat="@drawable/baseline_edit_24" />
+
+            <ImageButton
+                android:id="@+id/user_verified"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/round_icon_background"
+                app:layout_constraintStart_toEndOf="@+id/owner_account_activity"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_verified_user_24" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_account_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/constraintLayout"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/background_relative_layoutt">
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_relative_layoutt"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Email :"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_text_Email_Acc_activity"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textView23"
+                android:background="@drawable/background_relative_layoutt"
+                android:ems="10"
+                android:inputType="text"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/textView23"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_relative_layoutt"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Phone Number :"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/phone_acc_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/edit_text_Email_Acc_activity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textView24"
+                android:background="@drawable/background_relative_layoutt"
+                android:ems="10"
+                android:inputType="number"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/edit_text_Email_Acc_activity"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/edit_button_phone"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Click to Edit"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/textView24"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_relative_layoutt"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Address :"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_address_acc_Activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/phone_acc_activity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textView22"
+                android:background="@drawable/background_relative_layoutt"
+                android:ems="10"
+                android:inputType="text|textMultiLine"
+                android:padding="10dp"
+                android:paddingLeft="5dp"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/phone_acc_activity"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/edit_button_address"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView56"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click to Edit"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/edit_address_acc_Activity"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_relative_layoutt"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Hostel Type :"
+                android:textColor="#0B1552"
+                android:textSize="14sp" />
+
+            <CheckBox
+                android:id="@+id/checkBox_type_acc_activity"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_below="@id/edit_address_acc_Activity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textView25"
+                android:background="@drawable/background_relative_layoutt"
+                android:buttonTint="#0B1552"
+                android:checked="false"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="#000000"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/edit_button_phone"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/edit_text_Email_Acc_activity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/phone_acc_activity"
+                android:background="@drawable/main_activity_background"
+                android:elevation="25dp"
+                app:srcCompat="@drawable/baseline_edit_24" />
+
+            <ImageButton
+                android:id="@+id/edit_button_address"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/phone_acc_activity"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/edit_address_acc_Activity"
+                android:background="@drawable/main_activity_background"
+                android:elevation="25dp"
+                app:srcCompat="@drawable/baseline_edit_24" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_rl"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/rl_account_view"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:background="@drawable/round_icon_background"
+                android:elevation="30dp"
+                android:padding="5dp"
+                android:text="Save"
+                android:textColor="#0B1552"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ly_rl"
+            android:layout_margin="5dp"
+            android:background="@drawable/background_inside"
+            android:elevation="5dp"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView77"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text="Overview"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue_900"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ly_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView77"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    app:backgroundTint="#80D5DFF2"
+                    app:elevation="0dp"
+                    app:srcCompat="@drawable/baseline_bedroom_child_24" />
+
+                <TextView
+                    android:id="@+id/textView79"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:drawableTint="#000000"
+                    android:text="TextView"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ly_4"
+                android:layout_weight="0"
+                android:text="TextView" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

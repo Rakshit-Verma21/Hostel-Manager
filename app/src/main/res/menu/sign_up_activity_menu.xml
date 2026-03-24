@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/signup"
+        android:title="Sign UP"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/reset"
+        android:icon="@drawable/baseline_refresh_24"
+        app:showAsAction="always|withText" />
+</menu>

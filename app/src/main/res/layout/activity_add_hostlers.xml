@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_activity_background"
+    tools:context=".Hostelers.Add_Hostelers">
+
+    <FrameLayout
+        android:id="@+id/assign_room_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/ly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="56dp"
+                        android:background="@drawable/main_activity_welcome_user"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/textView33"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_vertical"
+                            android:text="Assign Room"
+                            android:textAlignment="center"
+                            android:textColor="#0B1552"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView43"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="4dp"
+                            android:text="3"
+                            android:textColor="#0B1552"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ly"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/background_relative_layoutt"
+                        android:elevation="6dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView80"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="25dp"
+                            android:background="@drawable/main_activity_background"
+                            android:padding="7dp"
+                            android:text="Name"
+                            android:textAlignment="center"
+                            android:textColor="#0B1552"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/name_display_room_assingment_page"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="25dp"
+                            android:background="@drawable/main_activity_background"
+                            android:padding="7dp"
+                            android:text="Tanya Srivastav"
+                            android:textAlignment="center"
+                            android:textColor="#0B1552" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/textView40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/ly2"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:text="Select a Room to assign"
+                        android:textColor="#0B1552"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/ly2"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/textView40"
+                        android:background="@drawable/background_relative_layoutt"
+                        android:spinnerMode="dropdown" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spinner"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp">
+
+                            <RelativeLayout
+                                android:id="@+id/relative_ly_assign_room"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/background_relative_layoutt"
+                                android:elevation="6dp">
+
+                                <TextView
+                                    android:id="@+id/text_view_Details"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="5dp"
+                                    android:text="Room Details"
+                                    android:textAlignment="center"
+                                    android:textColor="#0B1552"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/room_status"
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/text_view_Details"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:text="Status :"
+                                    android:textColor="#0B1552" />
+
+                                <TextView
+                                    android:id="@+id/room_size"
+                                    android:layout_width="100dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/text_view_Details"
+                                    android:layout_margin="5dp"
+                                    android:layout_toRightOf="@id/room_status"
+                                    android:padding="5dp"
+                                    android:text="Size :"
+                                    android:textAlignment="center"
+                                    android:textColor="#0B1552" />
+
+                                <TextView
+                                    android:id="@+id/room_type"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/text_view_Details"
+                                    android:layout_margin="5dp"
+                                    android:layout_toRightOf="@id/room_size"
+                                    android:padding="5dp"
+                                    android:text="Type :"
+                                    android:textAlignment="center"
+                                    android:textColor="#0B1552" />
+
+                                <TextView
+                                    android:id="@+id/room_occupied_no"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/room_status"
+                                    android:layout_margin="5dp"
+                                    android:padding="5dp"
+                                    android:text="Occupied :"
+                                    android:textColor="#0B1552" />
+
+                                <TextView
+                                    android:id="@+id/assign_room_room_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/room_size"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_toRightOf="@id/room_occupied_no"
+                                    android:padding="5dp"
+                                    android:text="Price : Rs "
+                                    android:textAlignment="center"
+                                    android:textColor="#0B1552" />
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/other_roommates"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/relative_ly_assign_room"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:padding="5dp"
+                                android:text="Room Shared With :"
+                                android:textColor="#0B1552"
+                                android:textStyle="bold" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_other_roommates_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/other_roommates"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/background_relative_layoutt"
+                                android:padding="10dp"
+                                android:scrollbars="vertical"
+                                tools:listitem="@layout/single_item_room_mates_hosteler_room_assignment" />
+
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/confirm_room"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/round_icon_background"
+                            android:elevation="50dp"
+                            android:padding="4dp"
+                            android:text="Confirm"
+                            android:textColor="#0B1552" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="100dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView49"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Do this later ?"
+                                android:textColor="#0B1552"
+                                android:textSize="12sp" />
+
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@drawable/background_relative_layoutt"
+                                android:text="Yes"
+                                android:textColor="#0B1552" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/main_activity_welcome_user"
+                android:elevation="6dp"
+                android:padding="10dp"
+                android:text="Enter The Details"
+                android:textAlignment="center"
+                android:textColor="#0B1552"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_relative_layoutt"
+                android:padding="5dp"
+                android:text="Select a PIcture"
+                android:textColor="@color/light_blue_900"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/hostler_pic"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_icon_background"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/add_profile_pic">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/main_activity_welcome_user"
+                android:elevation="6dp"
+                android:text="* Please Enter All Of the Required Details Below *"
+                android:textAlignment="center"
+                android:textColor="@color/light_blue_900"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_1_View_hostler_activity"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/background_relative_layoutt"
+                android:fitsSystemWindows="true">
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="12sp"
+                    android:paddingLeft="2dp"
+                    android:text="Name :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/textView36"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter The Name"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="40"
+                    android:maxLines="2"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="2dp"
+                    android:text="Home Address :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hostler_name"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toEndOf="@id/textView41"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter The Home Address"
+                    android:inputType="text|textMultiLine"
+                    android:maxLines="7"
+                    android:maxLength="200"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView42"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_address"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Education Details :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_education_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hostler_address"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/textView42"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter Past Education Details"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="50"
+                    android:maxLines="2"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView48"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_education_details"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Phone Number :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_education_details"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/textView48"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter Phone Number"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingLeft="2dp"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView78"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView48"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Date of joining :"
+                    android:textColor="@color/light_blue_900" />
+
+                <TextView
+                    android:id="@+id/hosteler_date_of_joining"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/hostler_phone_number"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/textView78"
+                    android:background="@drawable/main_activity_background"
+                    android:clickable="true"
+                    android:elevation="6dp"
+                    android:gravity="center"
+                    android:text="Click to Select Date"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <ImageButton
+                    android:id="@+id/clear_date_button"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/hostler_phone_number"
+                    android:layout_margin="10dp"
+                    android:layout_toRightOf="@id/hosteler_date_of_joining"
+                    android:background="@drawable/main_activity_background"
+                    android:elevation="6dp"
+                    app:srcCompat="@drawable/baseline_clear_24" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView78"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:text="Education ( Currently Pursuing ) :-"
+                    android:textColor="#0B1552"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView44"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Current Stage  :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_current_degree"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView44"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/textView45"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter currently pursuing degree/class"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView46"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_current_degree"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="School/College :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_college"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hostler_current_degree"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/textView46"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter The college/School name"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="50"
+                    android:maxLines="2"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView47"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hostler_college"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:paddingLeft="2dp"
+                    android:text="Parental Details :-"
+                    android:textColor="#0B1552"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView52"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView47"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Father Name :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_father_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView47"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/textView52"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter Father's Name"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="40"
+                    android:maxLines="2"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_father_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Mother Name :"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_mother_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/hostler_father_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/textView53"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter Mother's Name"
+                    android:inputType="text|textMultiLine"
+                    android:maxLength="40"
+                    android:maxLines="2"
+                    android:paddingLeft="2dp"
+                    android:scrollHorizontally="false"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView54"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_mother_name"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Phone Number (Father)"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_father_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView53"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/textView54"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter Father's Phone No."
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingLeft="2dp"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/textView54"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center"
+                    android:paddingLeft="2dp"
+                    android:text="Phone Number (Mother)"
+                    android:textColor="@color/light_blue_900" />
+
+                <EditText
+                    android:id="@+id/hostler_mother_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/hostler_father_phone_number"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_toRightOf="@id/textView55"
+                    android:backgroundTint="#000000"
+                    android:ems="10"
+                    android:hint="Enter Mother's Phone No."
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingLeft="2dp"
+                    android:textColorHint="#000000"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:fitsSystemWindows="true">
+
+                <TextView
+                    android:id="@+id/textView57"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/main_activity_welcome_user"
+                    android:elevation="6dp"
+                    android:padding="4dp"
+                    android:text="Add Documents"
+                    android:textAlignment="center"
+                    android:textColor="#0B1552"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView58"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/textView57"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/background_relative_layoutt"
+                    android:gravity="center"
+                    android:text="Photo of Aadhaar Card"
+                    android:textAlignment="center"
+                    android:textColor="#0B1552" />
+
+                <ImageView
+                    android:id="@+id/photo_aadhaar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/textView57"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/textView58"
+                    app:srcCompat="@drawable/baseline_add_photo_alternate_24" />
+
+                <TextView
+                    android:id="@+id/textView59"
+                    android:layout_width="200dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/textView58"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/background_relative_layoutt"
+                    android:gravity="center"
+                    android:text="Photo of PAN Card"
+                    android:textAlignment="center"
+                    android:textColor="#0B1552"
+                    android:textColorHint="#000000" />
+
+                <ImageView
+                    android:id="@+id/photo_pan"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/photo_aadhaar"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_toRightOf="@id/textView59"
+                    app:srcCompat="@drawable/baseline_add_photo_alternate_24" />
+
+                <TextView
+                    android:id="@+id/textView60"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/photo_pan"
+                    android:layout_marginTop="20dp"
+                    android:text="* The Photo's Should Be Clear and less then 4 MB in Size *"
+                    android:textAlignment="center"
+                    android:textColor="#0B1552"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text_info_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textView60"
+                    android:layout_marginTop="4dp"
+                    android:text="Please Confirm the Details Above and Click below to save the details and Add this person "
+                    android:textAlignment="center"
+                    android:textColor="#0B1552"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/text_info_save"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/hostler_save_changes"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_icon_background"
+                        android:elevation="50dp"
+                        android:foregroundGravity="center"
+                        app:srcCompat="@drawable/baseline_check_circle_24" />
+
+                    <ImageButton
+                        android:id="@+id/button_edit_hostler_information"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/round_icon_background"
+                        android:elevation="50dp"
+                        app:srcCompat="@drawable/baseline_edit_24" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_layout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/linear_layout_1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/add_button_hostler_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/background_text"
+                        android:drawableEnd="@drawable/baseline_person_add_alt_1_24"
+                        android:drawablePadding="3dp"
+                        android:drawableTint="@color/black"
+                        android:elevation="30dp"
+                        android:text="Add"
+                        android:textSize="12sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progress_upload_documents_hostler"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/round_icon_background"
+                        android:indeterminateBehavior="repeat"
+                        android:indeterminateTint="@color/white" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
